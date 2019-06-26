@@ -11,7 +11,9 @@ import java.util.Scanner;
 
 public class txtReader {
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+    Configuracao config = new Configuracao();
+    
     Scanner ler = new Scanner(System.in);
     Empresas_brasileiras empresas_brasileiras = new Empresas_brasileiras();
     System.out.printf("Informe o nome de arquivo texto:\n");
@@ -61,7 +63,6 @@ public class txtReader {
         empresas_brasileiras.setOpcao_mei(linha.substring(925, 926));
         empresas_brasileiras.setSituacao_especial(linha.substring(926, 949));
         empresas_brasileiras.setData_situacao_especial(linha.substring(949, 957));
-        System.out.printf("%s\n", empresas_brasileiras.cnpj);
         
         
         linha = lerArq.readLine(); // lê da segunda até a última linha
